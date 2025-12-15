@@ -1,52 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazi Hashirun Mahin Ahadi | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav h1 { font-size: 20px; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a:hover { color: #38bdf8; }
+
+    section { padding: 100px 60px; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .hero-text h2 { font-size: 36px; margin-bottom: 10px; }
+    .hero-text h3 { font-size: 22px; color: #38bdf8; margin-bottom: 20px; }
+    .hero-text p { max-width: 520px; }
+
+    .hero img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+    }
+
+    /* Sections */
+    h2.section-title { font-size: 28px; margin-bottom: 25px; }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 15px 25px; }
+      section { padding: 90px 25px; }
+      .hero { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Kazi Hashirun Mahin Ahadi</h1>
-    <p>Software Engineering Student</p>
-</header>
+  <nav>
+    <h1>Mahin</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section>
-    <h2>About Me</h2>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Kazi Hashirun Mahin Ahadi</h2>
+      <h3>Software Engineering Student</h3>
+      <p>
+        I am a B.Sc. Software Engineering student at Daffodil International University, passionate about
+        web development and machine learning. I enjoy building modern web applications and solving
+        real-world problems using technology.
+      </p>
+    </div>
+    <img src="profile.jpg" alt="Mahin Photo" />
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
     <p>
-        I am a B.Sc Software Engineering student , passionate about
-        web development and machine learning.
+      I am currently in my 11th semester of B.Sc. in Software Engineering at Daffodil International University.
+      I am eager to build my career in the IT industry where I can improve my skills, contribute to team-based
+      projects, and grow as a professional software engineer.
     </p>
-</section>
+  </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML, CSS</li>
-        <li>Python</li>
-        <li>Basic Machine Learning</li>
-        <li>Git & GitHub</li>
-    </ul>
-</section>
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript (Basic)</div>
+      <div class="card">Python</div>
+      <div class="card">Machine Learning (Basic)</div>
+      <div class="card">React & Node.js</div>
+      <div class="card">Git & GitHub</div>
+    </div>
+  </section>
 
-<section>
-    <h2>Projects</h2>
-    <ul>
-        <li>Diabetes Prediction Using Machine Learning</li>
-        <li>Portfolio Website</li>
-    </ul>
-</section>
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Diabetes Prediction Using Machine Learning</h3>
+        <p>Built a machine learning model to predict diabetes based on patient health data.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Personal responsive portfolio website to showcase skills, projects, and contact information.</p>
+      </div>
+      <div class="card">
+        <h3>E-Parking Challan System</h3>
+        <p>Developed a digital parking challan management system for efficient traffic handling.</p>
+      </div>
+    </div>
+  </section>
 
-<section>
-    <h2>Contact</h2>
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="card">
+      <h3>B.Sc. in Software Engineering</h3>
+      <p>Daffodil International University</p>
+      <p>CGPA: 3.29 / 4.00 (11th Semester)</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
     <p>Email: ahadimahin67@email.com</p>
-    <p>GitHub: github.com/ahadi818</p>
-</section>
+    <p>Phone: 01760930732</p>
+    <p>GitHub: <a href="https://github.com/ahadi818" target="_blank">github.com/ahadi818</a></p>
+  </section>
 
-<footer>
-    <p>© 2025 kazi hashirun mahin ahadi</p>
-</footer>
+  <footer>
+    <p>© 2025 Kazi Hashirun Mahin Ahadi. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
 
 </body>
 </html>
